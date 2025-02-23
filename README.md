@@ -92,7 +92,8 @@ Hop-PMLP is evaluated on **heterophilic and homophilic graphs**:
 | **Pubmed** | 19,717 | 88,651 | Low | 3 |
 
 📌 **Heterophilic Graphs:** Wisconsin, Texas, Cornell  
-📌 **Homophilic Graphs:** Cora, Pubmed  
+📌 **Homophilic Graphs:** Cora, Pubmed
+📌 **Based on 5 runs**
 
 ## 📈 Results
 Hop-PMLP consistently **outperforms PMLP and GNN** on heterophilic graphs.
