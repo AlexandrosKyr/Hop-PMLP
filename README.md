@@ -93,6 +93,7 @@ Hop-PMLP is evaluated on **heterophilic and homophilic graphs**:
 
 📌 **Heterophilic Graphs:** Wisconsin, Texas, Cornell  
 📌 **Homophilic Graphs:** Cora, Pubmed
+
 📌 **Based on 5 runs**
 
 ## 📈 Results
