@@ -57,5 +57,42 @@ This repository builds upon existing code from **PMLP** and **HopGNN**:
 ### 🔧 **Dependencies**
 To run this project, install the required dependencies:
 
-```bash
+
 pip install -r requirements.txt
+---
+
+## 📊 Datasets
+Hop-PMLP is evaluated on **heterophilic and homophilic graphs**:
+
+| **Dataset**  | **Nodes** | **Edges** | **Heterophily** | **Classes** |
+|-------------|---------:|---------:|--------------:|-----------:|
+| **Wisconsin** | 251 | 515 | High | 5 |
+| **Texas** | 183 | 325 | High | 5 |
+| **Cornell** | 183 | 293 | High | 5 |
+| **Cora** | 2,708 | 10,556 | Low | 7 |
+| **Pubmed** | 19,717 | 88,651 | Low | 3 |
+
+📌 **Heterophilic Graphs:** Wisconsin, Texas, Cornell  
+📌 **Homophilic Graphs:** Cora, Pubmed  
+
+## 📈 Results
+Hop-PMLP consistently **outperforms PMLP and GNN** on heterophilic graphs.
+
+| **Model**  | **Wisconsin** | **Texas** | **Cornell** | **Cora** | **Pubmed** |
+|------------|-------------:|----------:|-----------:|--------:|---------:|
+| **Hop-PMLP** | 81.96% ± 6.99 | 80.00% ± 10.57 | 72.97% ± 5.06 | 76.64% ± 2.31 | 76.62% ± 0.66 |
+| **PMLP** | 59.61% ± 5.11 | 63.24% ± 5.92 | 55.14% ± 6.22 | 73.96% ± 0.59 | 76.00% ± 1.02 |
+| **GNN** | 59.22% ± 5.44 | 59.46% ± 3.31 | 56.22% ± 10.00 | 74.36% ± 0.72 | 75.80% ± 0.93 |
+
+⏳ **Trade-off:** Hop-PMLP improves accuracy but has **higher computational costs** than PMLP.
+
+## ⚠️ Limitations & Future Work
+🚧 **Computational Overhead:**  
+- Adding the HopGNN layer improves accuracy but increases **training time** compared to standard PMLP.
+
+🔬 **Future Work:**  
+To improve efficiency, we can:
+- **Precompute** multi-hop features instead of computing them during training.
+- Optimize HopGNN integration **to reduce computational complexity**.
+- Investigate **lighter message-passing mechanisms** to maintain performance without the full HopGNN inference cost.
+
