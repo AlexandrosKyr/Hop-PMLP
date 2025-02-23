@@ -12,14 +12,12 @@ Hop-PMLP is a hybrid deep learning model that **combines Propagational Multi-Lay
 - ✅ **Full HopGNN message-passing** in inference for accuracy boost.
 - ✅ **Works well on heterophilic graphs** (Wisconsin, Texas, Cornell).
 
-🔗 **Project Repository:** [https://github.com/AlexandrosKyr/Hop-PMLP](https://github.com/AlexandrosKyr/Hop-PMLP)  
-📄 **Paper:** [Link to Paper (if available)]  
-
 ---
 
 ## 📚 Table of Contents
 - [🚀 Overview](#-overview)
 - [📌 Motivation](#-motivation)
+- [📄 Based on Previous Work](#-based-on-previous-work)
 - [🛠️ Code and Implementation](#️-code-and-implementation)
 - [📦 Installation](#-installation)
 - [📝 Usage](#-usage)
@@ -39,7 +37,23 @@ Traditional **Graph Neural Networks (GNNs)** struggle with:
 🚀 **Hop-PMLP addresses these problems** by combining **PMLP’s efficiency** with **HopGNN’s multi-hop aggregation** to improve performance on sparse, heterophilic graphs.
 
 ---
+## 📄 Based on Previous Work
 
+This project builds upon existing research in **Graph Neural Networks (GNNs), Propagational MLPs (PMLPs), and HopGNNs**. Specifically, it is inspired by:
+
+- **PMLP: Graph Neural Networks are Inherently Good Generalizers**  
+  *Yang et al., 2023*  
+  📄 [Paper Link](https://arxiv.org/abs/2212.09034)  
+  🔗 [Code Repository](https://github.com/chr26195/PMLP)  
+
+- **HopGNN: From Node Interaction to Hop Interaction**  
+  *Chen et al., 2023*  
+  📄 [Paper Link](https://arxiv.org/abs/2211.11761)  
+  🔗 [Code Repository](https://github.com/JC-202/HopGNN)  
+
+Our implementation extends these works by integrating **HopGNN’s message-passing abilities into PMLP**, focusing on **heterophilic, sparse graphs**.
+
+---
 ## 🛠️ Code and Implementation
 This repository builds upon existing code from **PMLP** and **HopGNN**:
 
@@ -57,8 +71,15 @@ This repository builds upon existing code from **PMLP** and **HopGNN**:
 ### 🔧 **Dependencies**
 To run this project, install the required dependencies:
 
-
 pip install -r requirements.txt
+
+## 📝 Usage
+
+### 🔹 **Training the Model**
+Run the following command to train Hop-PMLP:
+```bash
+python main.py --dataset <DATASET> --lr 0.01 --dropout 0.5 --num_layers 2
+```
 ---
 
 ## 📊 Datasets
