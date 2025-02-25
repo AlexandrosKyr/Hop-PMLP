@@ -8,9 +8,9 @@
 Hop-PMLP is a hybrid deep learning model that **combines Propagational Multi-Layer Perceptron (PMLP) with Hop Graph Neural Networks (HopGNN)** to improve performance on **heterophilic and sparse graphs**.
 
 ### Key Features:
-- ✅ **Single HopGNN layer** in training to capture graph structure.
-- ✅ **Full HopGNN message-passing** in inference for accuracy boost.
-- ✅ **Works well on heterophilic graphs** (Wisconsin, Texas, Cornell).
+- **Single HopGNN layer** in training to capture graph structure.
+- **Full HopGNN message-passing** in inference for accuracy boost.
+- **Works well on heterophilic graphs** (Wisconsin, Texas, Cornell).
 
 ---
 
@@ -28,9 +28,9 @@ Hop-PMLP is a hybrid deep learning model that **combines Propagational Multi-Lay
 
 ## Motivation
 Traditional **Graph Neural Networks (GNNs)** struggle with:
-- ❌ **Over-smoothing** in deep architectures.
-- ❌ **High computational cost** due to message passing.
-- ❌ **Poor performance on heterophilic graphs** where neighboring nodes have dissimilar features.
+- **Over-smoothing** in deep architectures.
+- **High computational cost** due to message passing.
+- **Poor performance on heterophilic graphs** where neighboring nodes have dissimilar features.
 
  **Hop-PMLP addresses these problems** by combining **PMLP’s efficiency** with **HopGNN’s multi-hop aggregation** to improve performance on sparse, heterophilic graphs.
 
@@ -55,18 +55,18 @@ Our implementation extends these works by integrating **HopGNN’s message-passi
 ## Code and Implementation
 This repository builds upon existing code from **PMLP** and **HopGNN**:
 
-- 🟢 **PMLP Code:** Adapted from [Yang et al. (2023)](https://github.com/chr26195/PMLP)
-- 🔵 **HopGNN Code:** Borrowed key components from [Chen et al. (2023)](https://github.com/JC-202/HopGNN)
+- **PMLP Code:** Adapted from [Yang et al. (2023)](https://github.com/chr26195/PMLP)
+- **HopGNN Code:** Borrowed key components from [Chen et al. (2023)](https://github.com/JC-202/HopGNN)
 
-### 🔑 Key Modifications:
-- ✅ Integrated **HopGNN layer** into PMLP.
-- ✅ Allowed **conditional activation** of HopGNN's message passing.
-- ✅ Adapted **training/inference loops** from PMLP.
+### Key Modifications:
+- Integrated **HopGNN layer** into PMLP.
+- Allowed **conditional activation** of HopGNN's message passing.
+- Adapted **training/inference loops** from PMLP.
 
 ---
 
 ## Installation
-### 🔧 **Dependencies**
+### **Dependencies**
 To run this project, install the required dependencies:
 
 pip install -r requirements.txt
@@ -91,12 +91,11 @@ Hop-PMLP is evaluated on **heterophilic and homophilic graphs**:
 | **Cora** | 2,708 | 10,556 | Low | 7 |
 | **Pubmed** | 19,717 | 88,651 | Low | 3 |
 
-📌 **Heterophilic Graphs:** Wisconsin, Texas, Cornell  
-📌 **Homophilic Graphs:** Cora, Pubmed
+**Heterophilic Graphs:** Wisconsin, Texas, Cornell  
+**Homophilic Graphs:** Cora, Pubmed
+**Based on 5 runs**
 
-📌 **Based on 5 runs**
-
-## 📈 Results
+## Results
 Hop-PMLP consistently **outperforms PMLP and GNN** on heterophilic graphs.
 
 | **Model**  | **Wisconsin** | **Texas** | **Cornell** | **Cora** | **Pubmed** |
@@ -105,10 +104,10 @@ Hop-PMLP consistently **outperforms PMLP and GNN** on heterophilic graphs.
 | **PMLP** | 59.61% ± 5.11 | 63.24% ± 5.92 | 55.14% ± 6.22 | 73.96% ± 0.59 | 76.00% ± 1.02 |
 | **GNN** | 59.22% ± 5.44 | 59.46% ± 3.31 | 56.22% ± 10.00 | 74.36% ± 0.72 | 75.80% ± 0.93 |
 
-⏳ **Trade-off:** Hop-PMLP improves accuracy but has **higher computational costs** than PMLP.
+**Trade-off:** Hop-PMLP improves accuracy but has **higher computational costs** than PMLP.
 
-## ⚠️ Limitations & Future Work
-🚧 **Computational Overhead:**  
+## Limitations & Future Work
+**Computational Overhead:**  
 - Adding the HopGNN layer improves accuracy but increases **training time** compared to standard PMLP.
 
  **Future Work:**  
